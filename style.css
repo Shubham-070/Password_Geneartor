@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #141e30,
+        #243b55,
+        #6a11cb
+    );
+
+    color: white;
+}
+
+/* Main Container */
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+/* Card */
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+
+    animation: appear 0.7s ease;
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #d0d0d0;
+    margin-bottom: 25px;
+}
+
+/* Password Box */
+
+.password-box {
+    display: flex;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    margin-bottom: 25px;
+}
+
+.password-box input {
+    flex: 1;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    padding: 15px;
+
+    color: white;
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+}
+
+.password-box button {
+    width: 55px;
+
+    border: none;
+
+    background: #7c3aed;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.password-box button:hover {
+    background: #9333ea;
+}
+
+/* Length */
+
+.label-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+#lengthValue {
+    background: #7c3aed;
+
+    padding: 3px 10px;
+
+    border-radius: 8px;
+}
+
+/* Slider */
+
+input[type="range"] {
+    width: 100%;
+
+    cursor: pointer;
+
+    accent-color: #a855f7;
+}
+
+/* Options */
+
+.options {
+    margin-top: 25px;
+}
+
+.option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.option:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.option input {
+    width: 18px;
+    height: 18px;
+
+    accent-color: #a855f7;
+
+    cursor: pointer;
+}
+
+/* Strength */
+
+.strength {
+    margin-top: 20px;
+}
+
+.strength-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+#strengthText {
+    font-weight: bold;
+}
+
+.strength-bar {
+    height: 8px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+#strengthFill {
+    height: 100%;
+
+    width: 75%;
+
+    background: #22c55e;
+
+    transition: 0.4s;
+}
+
+/* Generate Button */
+
+.generate-btn {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #a855f7
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+}
+
+.generate-btn:active {
+    transform: scale(0.98);
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+}
